@@ -1,0 +1,55 @@
+{
+	"name": "fkjs",
+	"publisher": "jxh",
+	"displayName": "Copilot Chat fkjs",
+	"description": "fkjs",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JInann/ai-code.git"
+	},
+	"version": "0.1.0",
+	"engines": {
+		"vscode": "^1.90.0"
+	},
+	"categories": [
+		"AI",
+		"Chat"
+	],
+	"activationEvents": [],
+	"enabledApiProposals": [
+		"chatVariableResolver"
+	],
+	"contributes": {
+		"chatParticipants": [
+			{
+				"id": "chat-code.fkjs",
+				"fullName": "Fk",
+				"name": "fk",
+				"description": "Wow!",
+				"isSticky": true,
+				"commands": [
+					{
+						"name": "popup",
+						"description": "请输入弹窗name"
+					}
+				]
+			}
+		]
+	},
+	"main": "./out/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^20.5.9",
+		"@vscode/prompt-tsx": "^0.2.3-alpha",
+		"@types/vscode": "1.90.0",
+		"@typescript-eslint/eslint-plugin": "^7.14.0",
+		"@typescript-eslint/parser": "^7.14.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.5.2"
+	}
+}
