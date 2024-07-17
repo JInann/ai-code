@@ -41,14 +41,17 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"lint": "eslint \"src/**/*.ts\"",
-		"watch": "tsc -watch -p ./"
+		"test": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./",
+		"deploy": "vsce publish --yarn"
 	},
 	"devDependencies": {
 		"@types/node": "^20.5.9",
-		"@vscode/prompt-tsx": "^0.2.3-alpha",
 		"@types/vscode": "1.90.0",
 		"@typescript-eslint/eslint-plugin": "^7.14.0",
 		"@typescript-eslint/parser": "^7.14.0",
+		"@vscode/prompt-tsx": "^0.2.3-alpha",
+		"@vscode/vsce": "^2.30.0",
 		"eslint": "^8.26.0",
 		"typescript": "^5.5.2"
 	}
