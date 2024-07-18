@@ -137,7 +137,7 @@ export function activate(context: vscode.ExtensionContext) {
 							vscode.LanguageModelChatMessage.User(v.componentDoc)
 						),
 						vscode.LanguageModelChatMessage.User(
-							'接下来我会让你生成一些代码，请尽可能使用我提供的组件'
+							'接下来我会让你生成一些代码，如果需要，请使用我提供的组件'
 						),
 						vscode.LanguageModelChatMessage.User(request.prompt),
 					];
