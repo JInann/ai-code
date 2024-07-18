@@ -24,6 +24,21 @@ variables name use user input name concat "Popup".eg: const {name}Popup = ref(fa
 script tag should be have setup attribute.
 include "define variables", "define open function", "define template" comments in the code.
 include style tag with scoped and lang="scss" attribute.
+input style in style tag.
+
+popup component doc:
+Props:
+参数	说明	类型	默认值
+modelValue	进入方向	bool	false
+type	进入方向	center/letf/top/right/bottom	center
+align	对齐方式	center/letf/top/right/bottom	center
+clickMaskClose	点击蒙层关闭	bool	true
+Events:
+事件名	说明	回调参数
+update:modelValue	弹窗状态改变时触发	event: MouseEvent
+Slots:
+名称	说明
+default	默认插槽
 
 Examples:
 
@@ -89,9 +104,7 @@ export function activate(context: vscode.ExtensionContext) {
 				if (model) {
 					const messages = [
 						vscode.LanguageModelChatMessage.User(popup_message),
-						vscode.LanguageModelChatMessage.User(
-							'创建一个名字为' + request.prompt + '的弹窗'
-						),
+						vscode.LanguageModelChatMessage.User(request.prompt),
 					];
 
 					const chatResponse = await model.sendRequest(messages, {}, token);
