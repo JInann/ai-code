@@ -43,7 +43,7 @@
 		"lint": "eslint \"src/**/*.ts\"",
 		"test": "eslint \"src/**/*.ts\"",
 		"watch": "tsc -watch -p ./",
-		"deploy": "vsce publish --yarn"
+		"deploy": "vsce publish --yarn --allow-all-proposed-apis"
 	},
 	"devDependencies": {
 		"@types/node": "^20.5.9",
