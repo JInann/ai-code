@@ -54,5 +54,6 @@
 		"@vscode/vsce": "^2.30.0",
 		"eslint": "^8.26.0",
 		"typescript": "^5.5.2"
-	}
+	},
+	"license": "MIT"
 }
