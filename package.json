@@ -3,11 +3,12 @@
 	"publisher": "jxh",
 	"displayName": "Copilot Chat fkjs",
 	"description": "fkjs",
+	"icon": "icon.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/JInann/ai-code.git"
 	},
-	"version": "0.1.3",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.90.0"
 	},
@@ -30,7 +31,11 @@
 				"commands": [
 					{
 						"name": "popup",
-						"description": "请输入弹窗name"
+						"description": "创建一个弹窗"
+					},
+					{
+						"name": "ani",
+						"description": "创建动画"
 					}
 				]
 			}
